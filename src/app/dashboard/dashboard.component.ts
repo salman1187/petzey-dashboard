@@ -48,17 +48,33 @@ throw new Error('Method not implemented.');
     },
     {
       name: 'Jane', pets: [this.pets[1]]
+    },
+    {
+      name: 'Jane', pets: [this.pets[2]]
+    },
+    {
+      name: 'Jane', pets: [this.pets[3]]
+    },
+    {
+      name: 'Jane', pets: [this.pets[4]]
+    },
+    {
+      name: 'Jane', pets: [this.pets[5]]
     }
     // Add more owners as needed
   ];
 
   appointments: Appointment[] = [
     { owner: this.owners[0], pet: this.owners[0].pets[0], date: '2024-04-30', time: '10:00 AM' },
-    { owner: this.owners[1], pet: this.owners[1].pets[0], date: '2024-05-01', time: '11:00 AM' }
+    { owner: this.owners[1], pet: this.owners[1].pets[0], date: '2024-05-01', time: '11:00 AM' },
+    { owner: this.owners[1], pet: this.owners[2].pets[0], date: '2024-05-01', time: '11:00 AM' },
+    { owner: this.owners[1], pet: this.owners[3].pets[0], date: '2024-05-01', time: '11:00 AM' },
+    { owner: this.owners[1], pet: this.owners[4].pets[0], date: '2024-05-01', time: '11:00 AM' },
+    { owner: this.owners[1], pet: this.owners[5].pets[0], date: '2024-05-01', time: '11:00 AM' }
     // Add more appointments as needed
   ];
 Total: any = 20;
-Completed: any = 10;
+Confirmed: any = 10;
 Closed: any = 5;
 Cancelled: any = 5;
 filterAppointmentsByDate(): Appointment[] {
