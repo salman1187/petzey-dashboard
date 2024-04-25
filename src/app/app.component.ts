@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title: any;
   toggleSidebar() {
     document.querySelector("#sidebar")?.classList.toggle("expand");
   }
