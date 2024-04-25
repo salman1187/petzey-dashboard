@@ -58,7 +58,7 @@ throw new Error('Method not implemented.');
     // Add more appointments as needed
   ];
 Total: any = 20;
-Completed: any = 10;
+Confirmed: any = 10;
 Closed: any = 5;
 Cancelled: any = 5;
 filterAppointmentsByDate(): Appointment[] {
