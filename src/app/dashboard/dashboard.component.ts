@@ -1,91 +1,73 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-
 import { FormsModule } from '@angular/forms';
-
-interface Pet {
-  name: string;
-  species: string;
-  age: number;
-}
-
-interface Owner {
-  name: string;
-  pets: Pet[];
-}
-
-interface Appointment {
-  owner: Owner;
-  pet: Pet;
-  date: string;
-  time: string;
-}
-
+import { Pet } from '../models/pet';
+import { Owner } from '../models/owner';
+import { Appointment } from '../models/appointment';
+import { CardComponent } from '../card/card.component';
+import { AppointmentCardDto } from '../models/AppointmentCard';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,CardComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent {
-  selectedDate: string = '';
-openDatePicker() {
-throw new Error('Method not implemented.');
-}
-  
-  pets: Pet[] = [
-    { name: 'Max', species: 'Dog', age: 3 },
-    { name: 'Whiskers', species: 'Cat', age: 5 }
-    // Add more pets as needed
-  ];
-
-  owners: Owner[] = [
-    {
-      name: 'John', pets: [this.pets[0]]
-    },
-    {
-      name: 'Jane', pets: [this.pets[1]]
-    },
-    {
-      name: 'Jane', pets: [this.pets[2]]
-    },
-    {
-      name: 'Jane', pets: [this.pets[3]]
-    },
-    {
-      name: 'Jane', pets: [this.pets[4]]
-    },
-    {
-      name: 'Jane', pets: [this.pets[5]]
-    }
-    // Add more owners as needed
-  ];
-
-  appointments: Appointment[] = [
-    { owner: this.owners[0], pet: this.owners[0].pets[0], date: '2024-04-30', time: '10:00 AM' },
-    { owner: this.owners[1], pet: this.owners[1].pets[0], date: '2024-05-01', time: '11:00 AM' },
-    { owner: this.owners[1], pet: this.owners[2].pets[0], date: '2024-05-01', time: '11:00 AM' },
-    { owner: this.owners[1], pet: this.owners[3].pets[0], date: '2024-05-01', time: '11:00 AM' },
-    { owner: this.owners[1], pet: this.owners[4].pets[0], date: '2024-05-01', time: '11:00 AM' },
-    { owner: this.owners[1], pet: this.owners[5].pets[0], date: '2024-05-01', time: '11:00 AM' }
-    // Add more appointments as needed
-  ];
-Total: any = 20;
-Confirmed: any = 10;
-Closed: any = 5;
-Cancelled: any = 5;
-filterAppointmentsByDate(): Appointment[] {
-  console.log('Selected Date:', this.selectedDate);
-  if (!this.selectedDate) {
-    console.log('No date selected. Returning all appointments.');
-    return this.appointments; // If no date selected, return all appointments
+export class DashboardComponent  implements OnInit{
+  ngOnInit(): void {
   }
+  appointmentCards: AppointmentCardDto[] = [
+  {
+    appointmentID: 1,
+    doctorID: 1,
+    petID: 1,
+    petName: 'Doggo',
+    petAge: 3,
+    petGender: 'Male',
+    ownerName: 'John',
+    vetName: 'John',
+    vetSpecialization: 'NAVLE',
+    scheduleDate: new Date('2024-04-26T09:00:00')
+  },
+  {
+    appointmentID: 2,
+    doctorID: 2,
+    petID: 2,
+    petName: 'Fluffy',
+    petAge: 2,
+    petGender: 'Female',
+    ownerName: 'Alice',
+    vetName: 'Alice',
+    vetSpecialization: 'Navle',
+    scheduleDate: new Date('2024-04-27T10:30:00')
+  }
+];
+
+  user : string = "Doctor";
+  selectedDate: string = '';
+
+  Total: any = 20;
+  Confirmed: any = 10;
+  Closed: any = 5;
+  Cancelled: any = 5;
+
+
+
+
+
+
+
+
+
+
+
+  // filterAppointmentsByDate(): Appointment[] {
+//   console.log('Selected Date:', this.selectedDate);
+//   if (!this.selectedDate) {
+//     console.log('No date selected. Returning all appointments.');
+//     return this.appointments; // If no date selected, return all appointments
+//   }
   // Filter appointments based on the selected date
-  const filteredAppointments = this.appointments.filter(appointment => appointment.date === this.selectedDate);
-  console.log('Filtered Appointments:', filteredAppointments);
-  return filteredAppointments;
-}
 }
