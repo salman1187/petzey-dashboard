@@ -140,3 +140,21 @@ a.sidebar-link:hover {
     transform: rotate(45deg);
     transition: all .2s ease-out;
 }
+/* @media (max-width: 768px) {
+    #sidebar {
+        position: absolute;  
+        height: 100vh;      
+        z-index: 1050;       
+        width: 70px;
+        transition: all .25s ease-in-out;
+    }
+
+    #sidebar.expand {
+        width: 260px;        
+    }
+
+    .main {
+        width: 100%;         
+        transition: none;    
+    }
+} */
