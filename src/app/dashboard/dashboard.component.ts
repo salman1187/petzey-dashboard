@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -8,6 +8,8 @@ import { Owner } from '../models/owner';
 import { Appointment } from '../models/appointment';
 import { CardComponent } from '../card/card.component';
 import { AppointmentCardDto } from '../models/AppointmentCard';
+import { AppointmentService } from '../appointment.service';
+import { AppointmentStats } from '../models/AppointmentStatusCount';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -16,58 +18,39 @@ import { AppointmentCardDto } from '../models/AppointmentCard';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent  implements OnInit{
+  offset : number = 0;
+selectedStatus: any;
+  onStatusChange() {
+    this.getAppointmentsByStatus(this.selectedStatus);
+}
+
+onDateChange() {
+  this.getAppointmentsByDate(this.selectedDate);
+}
+  constructor(private appointmentservice: AppointmentService) {}
   ngOnInit(): void {
+    this.getAppointments();
+    this.getAppointmentsByStatusCount();
   }
-  appointmentCards: AppointmentCardDto[] = [
-  {
-    appointmentID: 1,
-    doctorID: 1,
-    petID: 1,
-    petName: 'Doggo',
-    petAge: 3,
-    petGender: 'Male',
-    ownerName: 'John',
-    vetName: 'John',
-    vetSpecialization: 'NAVLE',
-    scheduleDate: new Date('2024-04-26T09:00:00')
-  },
-  {
-    appointmentID: 2,
-    doctorID: 2,
-    petID: 2,
-    petName: 'Fluffy',
-    petAge: 2,
-    petGender: 'Female',
-    ownerName: 'Alice',
-    vetName: 'Alice',
-    vetSpecialization: 'Navle',
-    scheduleDate: new Date('2024-04-27T10:30:00')
-  }
-];
+  appointmentCards: AppointmentCardDto[] = [];
 
   user : string = "Doctor";
   selectedDate: string = '';
-
-  Total: any = 20;
-  Confirmed: any = 10;
-  Closed: any = 5;
-  Cancelled: any = 5;
-
-
-
-
-
-
-
-
-
-
-
-  // filterAppointmentsByDate(): Appointment[] {
-//   console.log('Selected Date:', this.selectedDate);
-//   if (!this.selectedDate) {
-//     console.log('No date selected. Returning all appointments.');
-//     return this.appointments; // If no date selected, return all appointments
-//   }
-  // Filter appointments based on the selected date
+  getAppointmentsByStatusCount(){
+    this.appointmentservice.getAppointmentsByStatusCount().subscribe(data => {this.a = data})
+  }
+  
+  a : AppointmentStats ={
+    Total: "",
+    Confirmed: "",
+    Closed: "",
+    Cancelled: ""
+  }
+  getAppointments(): void {
+    this.appointmentservice.getAppointment().subscribe(data => {
+      this.appointmentCards = data;
+    });
+  }
+  getAppointmentsByStatus(selectedStatus: string) : void {}
+  getAppointmentsByDate(selectedDate: string) : void {}
 }
