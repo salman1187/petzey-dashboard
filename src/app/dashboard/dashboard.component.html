@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <h5 class="card-title">{{ Total }}</h5>
+                            <h5 class="card-title">{{ a.Total }}</h5>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <h5 class="card-title">{{ Confirmed }}</h5>
+                            <h5 class="card-title">{{ a.Confirmed }}</h5>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <h5 class="card-title">{{ Closed }}</h5>
+                            <h5 class="card-title">{{ a.Closed }}</h5>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <h5 class="card-title">{{ Cancelled }}</h5>
+                            <h5 class="card-title">{{ a.Cancelled }}</h5>
                         </div>
                     </div>
                 </div>
@@ -111,11 +111,12 @@
         </div>
         <div class=" container-box col-md-3 col-sm-6 d-flex align-items-center justify-content-center"> 
             <form action="post" method="post">
-                <input type="date" name="selectedDate" [(ngModel)]="selectedDate">
+                <input type="date" name="selectedDate" [(ngModel)]="selectedDate" (change)="onDateChange()">
             </form>
         </div>
         <div class=" container-box col-md-3 col-sm-6 d-flex align-items-center justify-content-center"> 
-            <select name="Status" class="form-select">
+            <select name="Status" class="form-select" (change)="onStatusChange()" [(ngModel)]="selectedStatus">
+
                 <option value="" hidden>Select Status</option>
                 <option value="confirmed">Confirmed</option>
                 <option value="completed">Completed</option>

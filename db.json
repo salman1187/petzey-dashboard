@@ -1,0 +1,35 @@
+{
+    "appointments": [
+      {
+        "appointmentID": 1,
+        "doctorID": 1,
+        "petID": 1,
+        "petName": "Doggo",
+        "petAge": 3,
+        "petGender": "Male",
+        "ownerName": "John",
+        "vetName": "John",
+        "vetSpecialization": "NAVLE",
+        "scheduleDate": "2024-04-26T09:00:00.000Z"
+      },
+      {
+        "appointmentID": 2,
+        "doctorID": 2,
+        "petID": 2,
+        "petName": "Fluffy",
+        "petAge": 2,
+        "petGender": "Female",
+        "ownerName": "Alice",
+        "vetName": "Alice",
+        "vetSpecialization": "NAVLE",
+        "scheduleDate": "2024-04-27T10:30:00.000Z"
+      }
+    ],
+    "status" : {
+      "Total" : "20",
+      "Cancelled" : "10",
+      "Confirmed" : "5",
+      "Closed" : "5"
+    }
+  }
+  

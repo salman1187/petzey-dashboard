@@ -1,6 +1,6 @@
 .container-box {
     border: 1px solid transparent; /* Invisible border */
-    padding: 20px;
+    padding: 5px;
     border-radius: 5px;
     /* Add any other styles you want for the box */
   }
