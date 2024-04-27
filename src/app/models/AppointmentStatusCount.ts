@@ -3,5 +3,5 @@ export class AppointmentStats {
     Confirmed: any ;
     Closed: any ;
     Cancelled: any ;
-  
+    //PENDING
   }
