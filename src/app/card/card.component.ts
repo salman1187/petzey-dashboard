@@ -15,4 +15,6 @@ export class CardComponent {
   appointmentcard!: AppointmentCardDto;
   @Input()
   user : string="";
+  //api
+  
 }
