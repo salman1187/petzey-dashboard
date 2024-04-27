@@ -47,5 +47,8 @@ select[name="Status"] {
 select[name="Status"]::-ms-expand {
     color: orange;
 }
-
-
+.container-box {
+    border: 1px solid transparent; 
+    padding: 5px;
+    
+  }
