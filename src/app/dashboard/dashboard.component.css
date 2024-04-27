@@ -47,3 +47,5 @@ select[name="Status"] {
 select[name="Status"]::-ms-expand {
     color: orange;
 }
+
+

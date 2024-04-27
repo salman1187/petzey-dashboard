@@ -42,6 +42,54 @@ export class DashboardComponent  implements OnInit{
     vetName: 'Alice',
     vetSpecialization: 'Navle',
     scheduleDate: new Date('2024-04-27T10:30:00')
+  },
+  {
+    appointmentID: 1,
+    doctorID: 1,
+    petID: 1,
+    petName: 'Doggo',
+    petAge: 3,
+    petGender: 'Male',
+    ownerName: 'John',
+    vetName: 'John',
+    vetSpecialization: 'NAVLE',
+    scheduleDate: new Date('2024-04-26T09:00:00')
+  },
+  {
+    appointmentID: 2,
+    doctorID: 2,
+    petID: 2,
+    petName: 'Fluffy',
+    petAge: 2,
+    petGender: 'Female',
+    ownerName: 'Alice',
+    vetName: 'Alice',
+    vetSpecialization: 'Navle',
+    scheduleDate: new Date('2024-04-27T10:30:00')
+  },
+  {
+    appointmentID: 1,
+    doctorID: 1,
+    petID: 1,
+    petName: 'Doggo',
+    petAge: 3,
+    petGender: 'Male',
+    ownerName: 'John',
+    vetName: 'John',
+    vetSpecialization: 'NAVLE',
+    scheduleDate: new Date('2024-04-26T09:00:00')
+  },
+  {
+    appointmentID: 2,
+    doctorID: 2,
+    petID: 2,
+    petName: 'Fluffy',
+    petAge: 2,
+    petGender: 'Female',
+    ownerName: 'Alice',
+    vetName: 'Alice',
+    vetSpecialization: 'Navle',
+    scheduleDate: new Date('2024-04-27T10:30:00')
   }
 ];
 
@@ -53,21 +101,5 @@ export class DashboardComponent  implements OnInit{
   Closed: any = 5;
   Cancelled: any = 5;
 
-
-
-
-
-
-
-
-
-
-
-  // filterAppointmentsByDate(): Appointment[] {
-//   console.log('Selected Date:', this.selectedDate);
-//   if (!this.selectedDate) {
-//     console.log('No date selected. Returning all appointments.');
-//     return this.appointments; // If no date selected, return all appointments
-//   }
   // Filter appointments based on the selected date
 }
