@@ -13,10 +13,11 @@ import { AppointmentCardDto } from '../models/AppointmentCard';
     imports: [CardComponent,FormsModule,CommonModule]
 })
 export class AdminDashboardComponent implements OnInit {
+selectedDoctor: any;
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-selectedStatus: any;
+selectedStatus: any = "";
 onStatusChange() {
 throw new Error('Method not implemented.');
 }

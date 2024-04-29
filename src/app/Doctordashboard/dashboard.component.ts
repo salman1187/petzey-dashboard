@@ -10,6 +10,7 @@ import { CardComponent } from '../card/card.component';
 import { AppointmentCardDto } from '../models/AppointmentCard';
 import { AppointmentService } from '../appointment.service';
 import { AppointmentStats } from '../models/AppointmentStatusCount';
+import { FilterParams } from '../models/FilterParams';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,7 +21,7 @@ import { AppointmentStats } from '../models/AppointmentStatusCount';
 })
 export class DoctorDashboardComponent  implements OnInit{
   offset : number = 0;
-selectedStatus: any;
+selectedStatus: any = "";
   onStatusChange() {
     this.getAppointmentsByStatus(this.selectedStatus);
 }
@@ -40,15 +41,15 @@ onDateChange() {
   getAppointmentsByStatusCount(){
     this.appointmentservice.getAppointmentsByStatusCount().subscribe(data => {this.a = data})
   }
-  
+  filters: FilterParams = {scheduleDate : null, status:"", doctorID: 1}
   a : AppointmentStats ={
-    Total: "",
-    Confirmed: "",
-    Closed: "",
-    Cancelled: ""
+    Total: 0,
+    Confirmed: 0,
+    Closed: 0,
+    Cancelled: 0
   }
   getAppointments(): void {
-    this.appointmentservice.getAppointment().subscribe(data => {
+    this.appointmentservice.getAppointmentsWithFilter(this.filters).subscribe(data => {
       this.appointmentCards = data;
     });
   }

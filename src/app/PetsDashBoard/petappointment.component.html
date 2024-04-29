@@ -9,8 +9,8 @@
             </form>
         </div>
         <div class=" container-box col-md-3 col-sm-6 d-flex align-items-center justify-content-center"> 
-            <select name="Status" class="form-select">
-                <option value="" hidden>Select Status</option>
+            <select name="Status" class="form-select" (change)="onStatusChange()" [(ngModel)]="selectedStatus">
+                <option value="">Select Status</option>
                 <option value="confirmed">Confirmed</option>
                 <option value="completed">Completed</option>
                 <option value="cancelled">Cancelled</option>

@@ -1,12 +1,15 @@
 export interface AppointmentCardDto {
-    appointmentID: number;
-    doctorID: number;
-    petID: number;
-    petName: string;
-    petAge: number;
-    petGender: string;
-    ownerName: string;
-    vetName: string;
-    vetSpecialization: string;
-    scheduleDate: Date;
+    AppointmentID: number;
+    DoctorID: number;
+    PetID: number;
+    PetName: string;
+    PetAge: number;
+    PetGender: string;
+    OwnerName: string;
+    PetPhoto: any;
+    DoctorName: string;
+    VetSpecialization: string;
+    DoctorPhoto: string;
+    ScheduleDate: Date;
+
 }

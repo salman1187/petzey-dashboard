@@ -5,12 +5,12 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 
 export const routes: Routes = [
     {
-        path: "dashboard", component: DoctorDashboardComponent, title:"dashboard"
+        path: "doctordashboard", component: DoctorDashboardComponent, title:"DashBoard"
     },
     {
-        path: "pets", component: PetDashBoardComponent, title:"PetsDashBoard"
+        path: "petsdashboard", component: PetDashBoardComponent, title:"DashBoard"
     },
     {
-        path: "admin", component: AdminDashboardComponent, title:"AdminDashBoard"
+        path: "admindashboard", component: AdminDashboardComponent, title:"DashBoard"
     }
 ];
