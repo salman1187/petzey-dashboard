@@ -9,6 +9,6 @@ export interface AppointmentCardDto {
     vetName: string;
     vetSpecialization: string;
     scheduleDate: Date;
-    //DOCTOR PHOTO
+    DoctorPhoto: string;
     //PET PHOTO
 }

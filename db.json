@@ -10,7 +10,8 @@
         "ownerName": "John",
         "vetName": "John",
         "vetSpecialization": "NAVLE",
-        "scheduleDate": "2024-04-26T09:00:00.000Z"
+        "scheduleDate": "2024-04-26T09:00:00.000Z",
+        "DoctorPhoto": "abc"
       },
       {
         "appointmentID": 2,
@@ -22,7 +23,8 @@
         "ownerName": "Alice",
         "vetName": "Alice",
         "vetSpecialization": "NAVLE",
-        "scheduleDate": "2024-04-27T10:30:00.000Z"
+        "scheduleDate": "2024-04-27T10:30:00.000Z",
+        "DoctorPhoto": "abc"
       }
     ],
     "status" : {

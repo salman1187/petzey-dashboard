@@ -12,32 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './petappointment.component.css'
 })
 export class PetappointmentComponent {
-  appointmentCards: AppointmentCardDto[] = [
-    {
-      appointmentID: 1,
-      doctorID: 1,
-      petID: 1,
-      petName: 'Doggo',
-      petAge: 3,
-      petGender: 'Male',
-      ownerName: 'John',
-      vetName: 'John',
-      vetSpecialization: 'NAVLE',
-      scheduleDate: new Date('2024-04-26T09:00:00')
-    },
-    {
-      appointmentID: 2,
-      doctorID: 2,
-      petID: 2,
-      petName: 'Fluffy',
-      petAge: 2,
-      petGender: 'Female',
-      ownerName: 'Alice',
-      vetName: 'Alice',
-      vetSpecialization: 'Internal Medicine',
-      scheduleDate: new Date('2024-04-27T10:30:00')
-    }
-  ];
+  appointmentCards: AppointmentCardDto[] = [];
   user : string = "Pet";
     selectedDate: any;
   
