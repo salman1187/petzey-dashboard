@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DoctorDashboardComponent } from './Doctordashboard/dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, DashboardComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, DoctorDashboardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -6,16 +6,16 @@
         </div>
         <div class="col-md-8 col-12">
             <div class="card-body">
-                <h5 class="card-title card-content">{{ appointmentcard.petName }}</h5>
-                <p class="text-muted card-content">{{ appointmentcard.petGender }} ({{appointmentcard.petAge}}) </p>
-                <p class="text-muted card-text card-content">Owner: {{ appointmentcard.ownerName }}</p>
+                <h5 class="card-title card-content">{{ appointmentcard.PetName }}</h5>
+                <p class="text-muted card-content">{{ appointmentcard.PetGender }} ({{appointmentcard.PetAge}}) </p>
+                <p class="text-muted card-text card-content">Owner: {{ appointmentcard.OwnerName }}</p>
             </div>
         </div>
     </div>
     <div class="row mt-3 ms-1 me-1">
         <div class="col-md-6 col-12 px-1 ">
-            <h6 class="card-text card-content">{{ appointmentcard.scheduleDate| date: 'mediumDate' }}</h6>
-            <h6 class="card-text card-content">{{ appointmentcard.scheduleDate | date: 'hh:mm:a'}}</h6>
+            <h6 class="card-text card-content">{{ appointmentcard.ScheduleDate| date: 'mediumDate' }}</h6>
+            <h6 class="card-text card-content">{{ appointmentcard.ScheduleDate | date: 'hh:mm:a'}}</h6>
         </div>
         <div class=" container-box col-md-6 col-12 d-flex align-items-center justify-content-between card-content">
             <i class="far fa-comment" style="color: orange;"></i>
@@ -25,8 +25,9 @@
     </div>                
     <div class="card-body">
         <a href="#" class="btn col-md-6 col-12">Details</a>
-        <a href="#" class="btn col-md-6 col-12">Feedback</a>
+        <a href="#" class="btn col-md-6 col-12 px-0">Feedback</a>
     </div>
+    <div class="button" (click)="clicked()" >click me</div>
 </div> 
 }
 @else if(user=="Doctor" || user == "Admin"){<div class="card shadow mt-3">
@@ -36,16 +37,16 @@
         </div>
         <div class="col-md-8 col-12">
             <div class="card-body">
-                <h5 class="card-title card-content">{{ appointmentcard.vetName }}</h5>
-                <p class="text-muted card-content">{{ appointmentcard.vetSpecialization }}</p>
-                <p class="text-muted card-text card-content">Pet:{{ appointmentcard.petName }}</p>
+                <h5 class="card-title card-content">{{ appointmentcard.DoctorName }}</h5>
+                <p class="text-muted card-content">{{ appointmentcard.VetSpecialization }}</p>
+                <p class="text-muted card-text card-content">Pet:{{ appointmentcard.PetName }}</p>
             </div>
         </div>
     </div>
     <div class="row mt-3 ms-1 me-1">
         <div class="col-md-6 col-12 px-1">
-            <h6 class="card-text card-content">{{ appointmentcard.scheduleDate| date: 'mediumDate' }}</h6>
-            <h6 class="card-text card-content">{{ appointmentcard.scheduleDate | date: 'hh:mm:a'}}</h6>
+            <h6 class="card-text card-content">{{ appointmentcard.ScheduleDate| date: 'mediumDate' }}</h6>
+            <h6 class="card-text card-content">{{ appointmentcard.ScheduleDate | date: 'hh:mm:a'}}</h6>
         </div>
         <div class=" container-box col-md-6 col-12 d-flex align-items-center justify-content-between">
             <i class="far fa-comment" style="color: orange;"></i>

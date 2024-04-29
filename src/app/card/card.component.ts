@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Appointment } from '../models/appointment';
 import { AppointmentCardDto } from '../models/AppointmentCard';
 import { DatePipe } from '@angular/common';
@@ -10,11 +10,17 @@ import { DatePipe } from '@angular/common';
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
-export class CardComponent {
+export class CardComponent implements OnInit {
   @Input()
   appointmentcard!: AppointmentCardDto;
   @Input()
   user : string="";
-  //api
-  
+
+  clicked() {
+    console.log(this.appointmentcard.OwnerName);
+  }
+
+  ngOnInit(): void {
+    
+  }
 }

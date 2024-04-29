@@ -1,12 +1,16 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PetappointmentComponent } from './petappointment/petappointment.component';
+import { DoctorDashboardComponent } from './Doctordashboard/dashboard.component';
+import { PetDashBoardComponent } from './PetsDashBoard/petappointment.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
     {
-        path: "dashboard", component: DashboardComponent, title:"dashboard"
+        path: "doctordashboard", component: DoctorDashboardComponent, title:"DashBoard"
     },
     {
-        path: "pets", component: PetappointmentComponent, title:"petapointments"
+        path: "petsdashboard", component: PetDashBoardComponent, title:"DashBoard"
+    },
+    {
+        path: "admindashboard", component: AdminDashboardComponent, title:"DashBoard"
     }
 ];
