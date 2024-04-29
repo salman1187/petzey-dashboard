@@ -10,6 +10,7 @@ import { CardComponent } from '../card/card.component';
 import { AppointmentCardDto } from '../models/AppointmentCard';
 import { AppointmentService } from '../appointment.service';
 import { AppointmentStats } from '../models/AppointmentStatusCount';
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -17,7 +18,7 @@ import { AppointmentStats } from '../models/AppointmentStatusCount';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent  implements OnInit{
+export class DoctorDashboardComponent  implements OnInit{
   offset : number = 0;
 selectedStatus: any;
   onStatusChange() {
