@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './petappointment.component.html',
   styleUrl: './petappointment.component.css'
 })
-export class PetappointmentComponent {
+export class PetDashBoardComponent {
   appointmentCards: AppointmentCardDto[] = [
     {
       appointmentID: 1,
